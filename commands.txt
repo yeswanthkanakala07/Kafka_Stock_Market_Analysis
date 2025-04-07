@@ -1,8 +1,44 @@
 ----------------------------------------------------------------------------------
-#download Kafka on amazon linux EC2
+# Download Kafka on Amazon Linux EC2
 wget https://downloads.apache.org/kafka/3.9.0/kafka_2.13-3.9.0.tgz
 
+# Extract the Kafka tarball
 tar -xzf kafka_2.13-3.9.0.tgz  
 ----------------------------------------------------------------------------------
-#install java
+# Install Java
 sudo dnf install java-17-amazon-corretto -y
+
+# Navigate to the Kafka directory
+cd kafka_2.13-3.9.0/
+----------------------------------------------------------------------------------
+# Start ZooKeeper
+bin/zookeeper-server-start.sh config/zookeeper.properties
+
+# Open a new terminal window to start Kafka.
+# Ensure you SSH into your EC2 instance as demonstrated earlier.
+----------------------------------------------------------------------------------
+# Allocate some memory to Kafka server 
+export KAFKA_HEAP_OPTS="-Xmx256M -Xms128M"
+
+# Start Kafka Server
+bin/kafka-server-start.sh config/server.properties
+
+# Note:
+# The server is currently configured to use a private IP. Update the `server.properties` file 
+# to allow it to run on the public IP of the EC2 instance.
+# You can do this by following one of the two approaches below:
+# 1. Open the file using `sudo nano config/server.properties` and modify the `ADVERTISED_LISTENERS` 
+#    property to the public IP of your EC2 instance.
+----------------------------------------------------------------------------------
+# Create the topic:
+# Duplicate the session & enter in a new console --
+cd kafka_2.12-3.3.1
+bin/kafka-topics.sh --create --topic demo_test --bootstrap-server 3.145.167.137:9092 --replication-factor 1 --partitions 1
+----------------------------------------------------------------------------------
+# Start Producer:
+bin/kafka-console-producer.sh --topic demo_test --bootstrap-server 3.145.167.137:9092
+----------------------------------------------------------------------------------
+# Start Consumer:
+# Duplicate the session & enter in a new console --
+cd kafka_2.12-3.3.1
+bin/kafka-console-consumer.sh --topic demo_test --bootstrap-server 3.145.167.137:9092
