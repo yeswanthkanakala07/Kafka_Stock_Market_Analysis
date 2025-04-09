@@ -1,8 +1,6 @@
 
 
----
 
-```markdown
 # 📈 Kafka Stock Market Analysis
 
 A real-time data pipeline project to analyze stock market data using **Apache Kafka** and the **AWS Cloud** ecosystem. This project showcases how to stream, store, transform, and query live data efficiently using various modern technologies.
@@ -56,7 +54,6 @@ Kafka_Stock_Market_Analysis/
 └── requirements.txt             # Python dependencies
 ```
 
----
 
 ## 📦 Features
 
