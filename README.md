@@ -40,7 +40,7 @@ This project demonstrates the end-to-end architecture of a real-time stock marke
 ```
 ## 🧩 Architecture Diagram
 
-![Kafka Stock Market Architecture](./architecture.png)
+![Kafka Stock Market Architecture](./Architecture.png)
 
 ---
 
