@@ -38,6 +38,9 @@ This project demonstrates the end-to-end architecture of a real-time stock marke
 ```
 [Kafka Producer] --> [AWS Kafka on EC2] --> [Amazon S3] --> [AWS Glue] --> [AWS Crawler] --> [AWS Athena]
 ```
+## 🧩 Architecture Diagram
+
+![Kafka Stock Market Architecture](./architecture.png)
 
 ---
 
