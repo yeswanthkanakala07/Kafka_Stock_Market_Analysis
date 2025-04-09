@@ -115,13 +115,9 @@ Northwest Missouri State University
 🌐 [LinkedIn](https://www.linkedin.com/in/yeswanthkanakala07/) | [GitHub](https://github.com/yeswanthkanakala07)
 
 ---
-
 ## 📃 License
 
 This project is licensed under the MIT License. See `LICENSE` for more information.
 
-```
 
----
 
-Let me know if you'd like to embed a visual architecture diagram, or want the README translated into a `.md` file!
