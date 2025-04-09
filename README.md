@@ -101,7 +101,7 @@ Kafka_Stock_Market_Analysis/
 
 ## 📸 Screenshots
 
-<Add screenshots here of the Athena query output, S3 bucket, Glue job runs, etc.>
+
 
 ---
 
